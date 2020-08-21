@@ -1,0 +1,1 @@
+# kamal-major-static
