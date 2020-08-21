@@ -1,0 +1,166 @@
+<html>
+   <head>
+      <title>Post an Item</title>
+      <link
+         rel="stylesheet"
+         href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      />
+      <link
+         href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@400;700&display=swap"
+         rel="stylesheet"
+      />
+      <link rel="stylesheet" href="styles/master.css" />
+   </head>
+   <body>
+      <div class="jumbotron">
+         <div class="row">
+            <div class="col col-3">
+               <h1 style="float: left;">
+                  <a class="text-primary" href="index.html">Home</a>
+               </h1>
+            </div>
+            <div class="col col-6">
+               <form method="POST">
+                  <div class="input-group">
+                     <div class="input-group-prepend">
+                        <div class="input-group-text">
+                           <img
+                              src="assets/search-solid.svg"
+                              alt="Search Icon"
+                              height="15"
+                              width="15"
+                           />
+                        </div>
+                     </div>
+                     <input
+                        type="text"
+                        name="itemName"
+                        required
+                        placeholder="Search an Item"
+                        class="form-control"
+                     />
+                     <input
+                        type="submit"
+                        value="Search"
+                        name="search"
+                        class="btn btn-outline-primary"
+                        style="float: right;"
+                     />
+                  </div>
+               </form>
+            </div>
+            <div class="col col-3">
+               <div style="float: right;">
+                  <h5>
+                     Hello, Kamal uddin
+                  </h5>
+                  <form method="POST">
+                     <a
+                        href="posting_item.html"
+                        class="btn btn-outline-success ml-2"
+                        >+</a
+                     >
+                     <input
+                        type="submit"
+                        value="Sign Out"
+                        class="btn btn-outline-danger"
+                        name="signOut"
+                     />
+                  </form>
+               </div>
+            </div>
+         </div>
+         <div style="float: right;">
+            <form action="#" method="post">
+               <input
+                  type="submit"
+                  value="Sort By Price"
+                  name="price"
+                  class="btn btn-primary"
+               />
+               <input
+                  type="submit"
+                  value="Sort By Categories"
+                  name="category"
+                  class="btn btn-primary"
+               />
+            </form>
+         </div>
+         <div style="float: left;">
+            <a href="./about.html" class="btn btn-primary">About Us</a>
+            <a href="./contact.html" class="btn btn-primary">Contact Us</a>
+            <a href="./privacy.html" class="btn btn-primary">Privacy Policy</a>
+         </div>
+      </div>
+
+      <div class="container">
+         <form method="POST" enctype="multipart/form-data">
+            <div class="input-group">
+               <input
+                  type="text"
+                  name="item_name"
+                  required
+                  placeholder="Item Name"
+                  class="form-control"
+               />
+               <select name="condition" class="form-control ml-5 mr-5">
+                  <option value="old">Old</option>
+                  <option value="new">New</option>
+               </select>
+               <input
+                  type="text"
+                  name="item_category"
+                  required
+                  placeholder="Category"
+                  class="form-control"
+               />
+            </div>
+            <div class="mt-2 input-group">
+               <input
+                  type="number"
+                  name="initbid"
+                  required
+                  placeholder="Initial Price"
+                  class="form-control"
+               />
+               <input
+                  type="text"
+                  name="location"
+                  required
+                  placeholder="Location"
+                  class="form-control ml-5 mr-5"
+               />
+               <input
+                  type="number"
+                  name="duration"
+                  placeholder="Duration of the Auction (in days)"
+                  class="form-control"
+               />
+            </div>
+            <br />
+            <label for="description"
+               >Please Provide Detailed Description of your Product</label
+            >
+            <textarea
+               rows="3"
+               id="description"
+               name="description"
+               class="mt-3 form-control"
+            >
+            </textarea>
+            <br />
+            <div class="form-group col-3" style="float: right;">
+               <label for="image">Choose Product Image</label>
+               <input type="file" id="image" name="fileToUpload" required />
+            </div>
+            <br />
+            <input
+               type="submit"
+               name="postitem"
+               value="Post Item"
+               class="btn btn-lg btn-primary"
+            />
+         </form>
+      </div>
+   </body>
+</html>
